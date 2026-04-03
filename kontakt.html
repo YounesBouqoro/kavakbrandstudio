@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KAVAK Brand Studio – Kontakt. Sprechen Sie mit Ozan Kavak über Vertrieb, Brands und Partnerschaft." />
+  <title>Kontakt · KAVAK Brand Studio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="bg-black" style="min-height:55vh;display:flex;align-items:flex-end;padding-bottom:5rem;padding-top:var(--nav-height);">
+    <div class="container">
+      <p class="t-subheadline hero-stagger" style="color:var(--gray-400);margin-bottom:1.5rem;">Kontakt</p>
+      <h1 class="hero-stagger" style="font-family:var(--font-serif);font-size:clamp(3rem,7vw,8rem);font-weight:300;line-height:0.95;letter-spacing:-0.02em;color:var(--white);">
+        Lassen Sie uns<br><em>sprechen.</em>
+      </h1>
+    </div>
+  </section>
+
+  <!-- CONTACT SPLIT -->
+  <section class="section-pad bg-white">
+    <div class="container">
+      <div class="grid-12">
+
+        <!-- LEFT: Info -->
+        <div style="grid-column:span 5;">
+          <p class="t-subheadline reveal" style="color:var(--gray-400);margin-bottom:3rem;">Direkter Kontakt</p>
+
+          <div style="margin-bottom:3rem;" class="reveal reveal-delay-1">
+            <p class="t-small" style="margin-bottom:0.75rem;">E-Mail</p>
+            <a href="mailto:info@kavak-brandstudio.de" style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;border-bottom:1px solid var(--gray-200);padding-bottom:4px;transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--black)'" onmouseout="this.style.borderColor='var(--gray-200)'">
+              info@kavak-brandstudio.de
+            </a>
+          </div>
+
+          <div style="margin-bottom:3rem;" class="reveal reveal-delay-2">
+            <p class="t-small" style="margin-bottom:0.75rem;">Telefon</p>
+            <a href="tel:+49000000000" style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;">
+              +49 (0) 000 000 000
+            </a>
+          </div>
+
+          <div style="margin-bottom:3rem;" class="reveal reveal-delay-3">
+            <p class="t-small" style="margin-bottom:0.75rem;">Standort</p>
+            <p style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;color:var(--gray-700);">Düsseldorf<br>Nordrhein-Westfalen</p>
+          </div>
+
+          <div class="reveal reveal-delay-4">
+            <p class="t-small" style="margin-bottom:0.75rem;">Vertriebsregionen</p>
+            <p class="t-body">NRW · Mitte Deutschland · Norddeutschland</p>
+          </div>
+        </div>
+
+        <div style="grid-column:span 1;"></div>
+
+        <!-- RIGHT: Form -->
+        <div style="grid-column:span 6;">
+          <p class="t-subheadline reveal" style="color:var(--gray-400);margin-bottom:3rem;">Anfrage stellen</p>
+          <form id="contactForm" class="reveal reveal-delay-1">
+            <div class="grid-12" style="gap:0;">
+              <div class="form-group" style="grid-column:span 6;">
+                <label class="form-label" for="vorname">Vorname</label>
+                <input class="form-input" type="text" id="vorname" name="vorname" placeholder="Max" required />
+              </div>
+              <div class="form-group" style="grid-column:span 6;">
+                <label class="form-label" for="nachname">Nachname</label>
+                <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="max@brand.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="unternehmen">Unternehmen / Brand</label>
+              <input class="form-input" type="text" id="unternehmen" name="unternehmen" placeholder="Brand GmbH" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="anliegen">Anliegen</label>
+              <select class="form-input" id="anliegen" name="anliegen" style="appearance:none;cursor:pointer;">
+                <option value="">Bitte wählen</option>
+                <option value="brand">Ich bin eine Brand – Vertriebspartnerschaft</option>
+                <option value="handel">Ich bin Händler – Neues Sortiment</option>
+                <option value="showroom">Showroom-Termin anfragen</option>
+                <option value="messe">Messeauftritt / Ordertag</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nachricht">Nachricht</label>
+              <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Kurze Beschreibung Ihres Anliegens…" rows="5"></textarea>
+            </div>
+            <div style="margin-top:2rem;">
+              <button type="submit" class="btn btn--filled" style="width:100%;justify-content:center;">
+                Anfrage senden
+              </button>
+            </div>
+            <p class="t-small" style="margin-top:1rem;text-align:center;">
+              Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html" style="border-bottom:1px solid currentColor;">Datenschutzerklärung</a> zu.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="../assets/js/partials.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
