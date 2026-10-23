@@ -925,3 +925,13 @@ body { background: var(--editorial-white); color: var(--midnight); }
 /* Hero: deep blue smoothly fades into pure white */
 .home-editorial .editorial-hero{background:linear-gradient(180deg,#06132d 0%,#102b53 18%,#315685 35%,#d9e8fa 55%,#ffffff 78%,#ffffff 100%)}
 .home-editorial .editorial-hero__light{background:radial-gradient(ellipse 47% 30% at 50% 19%,rgba(23,88,218,.2),transparent 80%);opacity:1}
+
+/* Refined KAVAK logo branding and reduced hero headline */
+.nav__logo{max-width:210px;min-width:0;display:inline-flex;align-items:center;overflow:visible}
+.kavak-logo--nav{display:block;width:clamp(120px,13vw,190px);height:56px;object-fit:contain;transition:filter .25s ease}
+.nav.scrolled:not(.dark-bg) .kavak-logo--nav{filter:brightness(0) saturate(100%) invert(8%) sepia(31%) saturate(1713%) hue-rotate(184deg) brightness(86%)}
+.home-editorial .editorial-hero__logo{width:min(90vw,650px);max-height:260px;object-fit:contain}
+.home-editorial .editorial-hero__brand{margin-top:1rem;margin-bottom:1.75rem}
+.home-editorial .editorial-hero__bottom h2{font-family:var(--font-sans);font-size:clamp(2.15rem,4.5vw,4.8rem);font-weight:700;letter-spacing:-.055em;line-height:1.09;color:#06132d;max-width:920px;margin:0}
+.home-editorial .editorial-hero__bottom h2 em{color:#174baf!important;font-style:normal;font-weight:800}
+@media(max-width:700px){.kavak-logo--nav{width:125px;height:44px}.home-editorial .editorial-hero__logo{width:min(92vw,490px);max-height:190px}.home-editorial .editorial-hero__bottom h2{font-size:clamp(1.95rem,7vw,3.15rem);letter-spacing:-.04em}}
