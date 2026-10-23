@@ -11,7 +11,7 @@
   const NAV_HTML = `
 <nav class="nav" id="mainNav">
   <div class="nav__inner">
-    <a href="${root}index.html" class="nav__logo">KAVAK <span>Brand Studio</span></a>
+    <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><img src="${root}assets/images/kavak-logo.png" alt="KAVAK Brand Studio" class="kavak-logo kavak-logo--header"></a>
     <ul class="nav__links">
       <li><a href="${root}studio.html">Studio</a></li>
       <li><a href="${root}brands.html">Brands</a></li>
@@ -38,7 +38,7 @@
   <div class="container">
     <div class="footer__grid">
       <div>
-        <div class="footer__logo">KAVAK <em>Brand Studio</em></div>
+        <a href="${root}index.html" class="footer__logo" aria-label="KAVAK Brand Studio – Startseite"><img src="${root}assets/images/kavak-logo.png" alt="KAVAK Brand Studio" class="kavak-logo kavak-logo--footer"></a>
         <p class="footer__tagline">360° Vertrieb & Markenstrategie für Fashion Brands und Retail-Partner in Deutschland.</p>
       </div>
       <div>
@@ -56,7 +56,7 @@
         <ul class="footer__links">
           <li><a href="mailto:ozan@kavakbrandstudio.com">ozan@kavakbrandstudio.com</a></li>
           <li><a href="tel:+4917660997699">+49 176 60997699</a></li>
-          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem">Plockstraße 8, 40219 Düsseldorf</li></li>
+          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem">Plockstraße 8, 40219 Düsseldorf</li>
         </ul>
       </div>
       <div>
