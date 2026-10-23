@@ -175,27 +175,23 @@
      ---------------------------------------- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    const status = document.getElementById('contactFormStatus');
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (!contactForm.reportValidity()) return;
       const btn = contactForm.querySelector('button[type="submit"]');
       const original = btn.textContent;
-      btn.textContent = 'Sende...';
-      btn.disabled = true;
-
-      // Replace with your backend / formspree endpoint
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
-
+      btn.disabled = true; btn.textContent = 'Wird gesendet …';
+      if (status) { status.textContent = ''; status.className = 'contact-feedback'; }
       try {
-        // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
-        await new Promise(r => setTimeout(r, 1200)); // Placeholder delay
-        btn.textContent = 'Gesendet ✓';
+        const response = await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(Object.fromEntries(new FormData(contactForm)))});
+        const result = await response.json().catch(()=>({}));
+        if (!response.ok || !result.success) throw new Error(result.error || 'Versand nicht möglich.');
+        if (status) { status.textContent = 'Vielen Dank! Ihre Anfrage wurde übermittelt.'; status.className = 'contact-feedback is-success'; }
         contactForm.reset();
-        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 3000);
-      } catch {
-        btn.textContent = 'Fehler – bitte erneut versuchen';
-        btn.disabled = false;
-      }
+      } catch (err) {
+        if (status) {status.textContent = err.message || 'Bitte versuchen Sie es erneut.'; status.className = 'contact-feedback is-error';}
+      } finally {btn.disabled = false;btn.textContent = original;}
     });
   }
 
