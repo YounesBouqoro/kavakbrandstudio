@@ -11,7 +11,7 @@
   const NAV_HTML = `
 <nav class="nav" id="mainNav">
   <div class="nav__inner">
-    <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><img src="${root}assets/images/kavak-logo.png" alt="KAVAK Brand Studio" class="kavak-logo kavak-logo--header"></a>
+    <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><span class="kavak-wordmark" aria-hidden="true">KAVAK</span></a>
     <ul class="nav__links">
       <li><a href="${root}studio.html">Studio</a></li>
       <li><a href="${root}brands.html">Brands</a></li>
@@ -38,7 +38,7 @@
   <div class="container">
     <div class="footer__grid">
       <div>
-        <a href="${root}index.html" class="footer__logo" aria-label="KAVAK Brand Studio – Startseite"><img src="${root}assets/images/kavak-logo.png" alt="KAVAK Brand Studio" class="kavak-logo kavak-logo--footer"></a>
+        <a href="${root}index.html" class="footer__logo" aria-label="KAVAK Brand Studio – Startseite"><span class="kavak-wordmark kavak-wordmark--footer" aria-hidden="true">KAVAK</span></a>
         <p class="footer__tagline">360° Vertrieb & Markenstrategie für Fashion Brands und Retail-Partner in Deutschland.</p>
       </div>
       <div>
