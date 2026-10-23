@@ -680,3 +680,77 @@ a   { color: inherit; text-decoration: none; }
   :root { --nav-height: 60px; }
   .brand-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+/* ============================================================
+   KAVAK / ELECTRIC BLUE EDITORIAL — PHASE 1 DESIGN SYSTEM
+   Brand signature: deep navy, electric blue, luminous editorial
+   ============================================================ */
+:root {
+  --midnight: #06132d;
+  --midnight-deep: #030a1c;
+  --navy: #0a2256;
+  --electric-blue: #1250ff;
+  --electric-bright: #3674ff;
+  --blue-ice: #9bbcff;
+  --editorial-white: #f8faff;
+  --editorial-paper: #f3f5fa;
+  --black: #06132d;
+  --white: #f8faff;
+  --font-serif: 'DM Sans', Arial, sans-serif;
+  --font-sans: 'DM Sans', Arial, sans-serif;
+  --glow-blue: 0 0 25px rgba(18,80,255,.35), 0 0 80px rgba(18,80,255,.14);
+  --brand-radius: 4px;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--editorial-white); color: var(--midnight); }
+::selection { background: var(--electric-blue); color: white; }
+:focus-visible { outline: 2px solid var(--electric-bright); outline-offset: 4px; }
+.t-display,.t-headline,.t-subheadline,.t-body,.t-small { font-family:var(--font-sans); }
+.t-display,.t-headline { font-weight: 500; letter-spacing: -.055em; }
+.t-headline em,.t-display em { font-style:normal; color:var(--electric-blue); }
+.t-subheadline { letter-spacing: .19em; font-weight: 600; }
+.bg-black { background:var(--midnight-deep); color:var(--editorial-white); }
+.bg-white { background:var(--editorial-white); }
+.bg-gray { background:var(--editorial-paper); }
+.nav { background:rgba(3,10,28,.91); border-bottom:1px solid rgba(145,178,255,.14); backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px); }
+.nav__logo { font-family:var(--font-sans); font-weight:800; letter-spacing:.17em; color:white; font-size:1.1rem; }
+.nav__logo span { font-size:.51rem; color:#9fbbff; letter-spacing:.19em; font-weight:600; }
+.nav__links a { color:#dfe8ff; font-weight:500; }
+.nav__links a:hover,.nav__links a.active { color:#8eb1ff; }
+.nav__hamburger span { background:var(--editorial-white); }
+.nav__mobile { background:var(--midnight-deep); }
+.nav__mobile a { color:var(--editorial-white); }
+.footer { background:var(--midnight-deep); color:var(--editorial-white); border-top:1px solid rgba(122,168,255,.16); }
+.footer__logo { font-family:var(--font-sans); font-weight:800; letter-spacing:.15em; color:var(--editorial-white); }
+.footer__logo em { font-style:normal; font-weight:500; letter-spacing:.05em; color:var(--blue-ice); }
+.footer__tagline { color:#adbfe4; }
+.btn { border-radius:var(--brand-radius); font-family:var(--font-sans); font-weight:600; letter-spacing:.1em; transition:background .25s, color .25s, box-shadow .25s, transform .25s; }
+.btn--filled { background:var(--electric-blue); border-color:var(--electric-blue); color:white; }
+.btn--filled:hover { background:var(--navy); border-color:var(--navy); color:white; box-shadow:var(--glow-blue); transform:translateY(-2px); }
+.btn--white { background:var(--editorial-white); color:var(--midnight); border-color:var(--editorial-white); }
+.btn--white:hover { background:#dce6ff; border-color:#dce6ff; color:var(--midnight); }
+.link-arrow:hover { color:var(--electric-blue); }
+.brand-card { border-color:#d9e1f0; transition:transform .35s,border-color .35s,box-shadow .35s; }
+.brand-card:hover { transform:translateY(-4px); border-color:var(--electric-blue); box-shadow:0 20px 50px rgba(6,19,45,.08); }
+.brand-card__name { font-family:var(--font-sans); font-weight:700; letter-spacing:-.03em; }
+.service-item__arrow { color:var(--electric-blue); }
+.stat-item__number { font-family:var(--font-sans); font-weight:600; letter-spacing:-.06em; }
+.form-input:focus,.form-textarea:focus { border-color:var(--electric-blue); }
+.hero.kavak-hero { isolation:isolate; background:var(--midnight-deep)!important; }
+.kavak-hero::before { content:""; position:absolute; inset:-12%; z-index:0; background:radial-gradient(ellipse 49% 48% at 67% 40%,rgba(21,77,255,.55),transparent 75%),radial-gradient(ellipse 34% 35% at 39% 67%,rgba(22,58,160,.21),transparent 80%); pointer-events:none; }
+.kavak-hero::after { content:""; position:absolute; inset:0; z-index:0; background:linear-gradient(90deg,rgba(3,10,28,.48),transparent 83%); pointer-events:none; }
+.kavak-hero .container { position:relative;z-index:2; }
+.kavak-hero h1 { font-family:var(--font-sans)!important; font-weight:600!important; letter-spacing:-.065em!important; font-size:clamp(3.1rem,7.4vw,8rem)!important; line-height:.97!important; text-wrap:balance; }
+.kavak-hero h1 em { font-style:normal!important; color:#94b5ff!important; text-shadow:0 0 32px rgba(46,108,255,.42); }
+.kavak-hero .hero-eyebrow { color:#a9c5ff!important; text-transform:uppercase; letter-spacing:.2em; }
+.kavak-hero .hero-signal { position:absolute; top:clamp(100px,16vh,210px);right:clamp(24px,7vw,115px); width:clamp(105px,18vw,265px); height:3px; border-radius:30px; background:#2466ff; box-shadow:0 0 12px #2466ff,0 0 45px #1250ff,0 0 90px rgba(18,80,255,.75); opacity:.94; z-index:1; }
+.page-editorial-heading { font-family:var(--font-sans)!important;font-weight:600!important;letter-spacing:-.055em!important; }
+@media(max-width:768px) {
+  .kavak-hero h1 { font-size:clamp(2.7rem,11vw,5rem)!important; }
+  .kavak-hero .hero-signal { right:10%;top:17%;width:100px; }
+  .nav__logo { font-size:.95rem;letter-spacing:.12em; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important; }
+}
