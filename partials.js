@@ -11,7 +11,7 @@
   const NAV_HTML = `
 <nav class="nav" id="mainNav">
   <div class="nav__inner">
-    <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><span class="kavak-wordmark" aria-hidden="true">KAVAK</span></a>
+    <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><span class="kavak-wordmark" aria-hidden="true">KAVAK <span class="kavak-wordmark__sub">BRAND STUDIO</span></span></a>
     <ul class="nav__links">
       <li><a href="${root}studio.html">Studio</a></li>
       <li><a href="${root}brands.html">Brands</a></li>
