@@ -15,10 +15,10 @@
     <a href="${root}index.html" class="nav__logo">KAVAK <span>Brand Studio</span></a>
     <ul class="nav__links">
       <li><a href="${root}index.html#showroom">Showroom</a></li>
-      <li><a href="${root}pages/brands.html">Brands</a></li>
-      <li><a href="${root}pages/service.html">Service</a></li>
-      <li><a href="${root}pages/dates.html">Dates</a></li>
-      <li><a href="${root}pages/kontakt.html">Kontakt</a></li>
+      <li><a href="${root}brands.html">Brands</a></li>
+      <li><a href="${root}service.html">Service</a></li>
+      <li><a href="${root}dates.html">Dates</a></li>
+      <li><a href="${root}kontakt.html">Kontakt</a></li>
     </ul>
     <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -27,10 +27,10 @@
 </nav>
 <ul class="nav__mobile">
   <li><a href="${root}index.html#showroom">Showroom</a></li>
-  <li><a href="${root}pages/brands.html">Brands</a></li>
-  <li><a href="${root}pages/service.html">Service</a></li>
-  <li><a href="${root}pages/dates.html">Dates</a></li>
-  <li><a href="${root}pages/kontakt.html">Kontakt</a></li>
+  <li><a href="${root}brands.html">Brands</a></li>
+  <li><a href="${root}service.html">Service</a></li>
+  <li><a href="${root}dates.html">Dates</a></li>
+  <li><a href="${root}kontakt.html">Kontakt</a></li>
 </ul>`;
 
   /* ---- FOOTER ---- */
@@ -46,10 +46,10 @@
         <p class="footer__col-title">Navigation</p>
         <ul class="footer__links">
           <li><a href="${root}index.html">Startseite</a></li>
-          <li><a href="${root}pages/brands.html">Brands</a></li>
-          <li><a href="${root}pages/service.html">Service</a></li>
-          <li><a href="${root}pages/dates.html">Dates</a></li>
-          <li><a href="${root}pages/kontakt.html">Kontakt</a></li>
+          <li><a href="${root}brands.html">Brands</a></li>
+          <li><a href="${root}service.html">Service</a></li>
+          <li><a href="${root}dates.html">Dates</a></li>
+          <li><a href="${root}kontakt.html">Kontakt</a></li>
         </ul>
       </div>
       <div>
@@ -63,16 +63,16 @@
       <div>
         <p class="footer__col-title">Rechtliches</p>
         <ul class="footer__links">
-          <li><a href="${root}pages/impressum.html">Impressum</a></li>
-          <li><a href="${root}pages/datenschutz.html">Datenschutz</a></li>
+          <li><a href="${root}impressum.html">Impressum</a></li>
+          <li><a href="${root}datenschutz.html">Datenschutz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span class="footer__copy">© 2025 KAVAK Brand Studio · Ozan Kavak</span>
+      <span class="footer__copy">© 2026 KAVAK Brand Studio · Ozan Kavak</span>
       <div class="footer__legal">
-        <a href="${root}pages/impressum.html">Impressum</a>
-        <a href="${root}pages/datenschutz.html">Datenschutz</a>
+        <a href="${root}impressum.html">Impressum</a>
+        <a href="${root}datenschutz.html">Datenschutz</a>
       </div>
     </div>
   </div>
