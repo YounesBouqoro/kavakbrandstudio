@@ -13,9 +13,9 @@
   <div class="nav__inner">
     <a href="${root}index.html" class="nav__logo">KAVAK <span>Brand Studio</span></a>
     <ul class="nav__links">
-      <li><a href="${root}index.html#studio">Showroom</a></li>
+      <li><a href="${root}studio.html">Studio</a></li>
       <li><a href="${root}brands.html">Brands</a></li>
-      <li><a href="${root}service.html">Service</a></li>
+      <li><a href="${root}service.html">Expertise</a></li>
       <li><a href="${root}dates.html">Dates</a></li>
       <li><a href="${root}kontakt.html">Kontakt</a></li>
     </ul>
@@ -25,9 +25,9 @@
   </div>
 </nav>
 <ul class="nav__mobile">
-  <li><a href="${root}index.html#studio">Showroom</a></li>
+  <li><a href="${root}studio.html">Studio</a></li>
   <li><a href="${root}brands.html">Brands</a></li>
-  <li><a href="${root}service.html">Service</a></li>
+  <li><a href="${root}service.html">Expertise</a></li>
   <li><a href="${root}dates.html">Dates</a></li>
   <li><a href="${root}kontakt.html">Kontakt</a></li>
 </ul>`;
@@ -46,7 +46,7 @@
         <ul class="footer__links">
           <li><a href="${root}index.html">Startseite</a></li>
           <li><a href="${root}brands.html">Brands</a></li>
-          <li><a href="${root}service.html">Service</a></li>
+          <li><a href="${root}service.html">Expertise</a></li>
           <li><a href="${root}dates.html">Dates</a></li>
           <li><a href="${root}kontakt.html">Kontakt</a></li>
         </ul>
