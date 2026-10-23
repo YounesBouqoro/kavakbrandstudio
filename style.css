@@ -894,3 +894,6 @@ body { background: var(--editorial-white); color: var(--midnight); }
 
 /* Founder portrait: same responsive source on Home and Studio */
 .editorial-founder__visual .founder-photo,.studio-portrait .founder-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:2}.editorial-founder__visual:has(.founder-photo)::after,.studio-portrait:has(.founder-photo)::before{display:none}
+
+/* Genuine KAVAK logo: readable in midnight header and warm scrolled navigation */
+.nav__logo{display:inline-flex;align-items:center;flex-shrink:0;max-width:220px}.kavak-logo{display:block;max-width:100%;width:auto;object-fit:contain}.kavak-logo--header{height:46px;max-width:190px}.nav.scrolled:not(.dark-bg) .kavak-logo--header{filter:drop-shadow(0 0 1px rgba(6,19,45,.25))}.footer__logo{display:inline-flex;align-items:center}.kavak-logo--footer{height:68px;max-width:230px}@media(max-width:600px){.kavak-logo--header{height:38px;max-width:145px}.kavak-logo--footer{height:52px;max-width:190px}}
