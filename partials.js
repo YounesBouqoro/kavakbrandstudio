@@ -54,9 +54,9 @@
       <div>
         <p class="footer__col-title">Kontakt</p>
         <ul class="footer__links">
-          <li><a href="mailto:info@kavak-brandstudio.de">info@kavak-brandstudio.de</a></li>
-          <li><a href="tel:+49000000000">+49 (0) 000 000 000</a></li>
-          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem">Düsseldorf, NRW</a></li>
+          <li><a href="mailto:ozan@kavakbrandstudio.com">ozan@kavakbrandstudio.com</a></li>
+          <li><a href="tel:+4917660997699">+49 176 60997699</a></li>
+          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem">Plockstraße 8, 40219 Düsseldorf</li></li>
         </ul>
       </div>
       <div>
