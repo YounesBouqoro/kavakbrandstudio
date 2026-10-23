@@ -5,8 +5,7 @@
 
 (function () {
   /* ---- resolve root path ---- */
-  const depth = (window.location.pathname.match(/\//g) || []).length;
-  const root = depth <= 1 ? './' : '../';
+  const root = './';
 
   /* ---- NAV ---- */
   const NAV_HTML = `
