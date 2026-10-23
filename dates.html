@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KAVAK Brand Studio – Ordertage & Messetermine. Aktuelle Termine für Fashion Trade Fairs in Deutschland." />
+  <meta name="description" content="KAVAK Brand Studio – Ordertage & Messetermine. Informationen zu kommenden Ordertagen, Messen und Events." />
   <title>Dates · KAVAK Brand Studio</title>
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -51,26 +51,7 @@
   <section class="section-pad bg-white">
     <div class="container">
 
-      <div class="events-filter reveal">
-        <button class="filter-btn active" data-filter="all">Alle</button>
-        <button class="filter-btn" data-filter="messe">Messen</button>
-        <button class="filter-btn" data-filter="ordertag">Ordertage</button>
-        <button class="filter-btn" data-filter="showroom">Showroom</button>
-      </div>
-
-      <table class="events-table reveal">
-        <thead>
-          <tr>
-            <td class="t-small" style="padding-bottom:1rem;color:var(--gray-400);">Datum</td>
-            <td class="t-small" style="padding-bottom:1rem;color:var(--gray-400);">Event</td>
-            <td class="t-small" style="padding-bottom:1rem;color:var(--gray-400);">Ort</td>
-            <td class="t-small" style="padding-bottom:1rem;color:var(--gray-400);">Typ</td>
-          </tr>
-        </thead>
-        <tbody id="eventsTableBody">
-          <!-- Filled by JS -->
-        </tbody>
-      </table>
+      <div class="events-coming reveal" style="padding:clamp(3rem,8vw,7rem) 1.5rem;text-align:center;background:#f2f5fb;border:1px solid rgba(6,19,45,.08);"><p class="t-subheadline" style="color:#244b94;margin-bottom:1.25rem;">KAVAK BRAND STUDIO / DATES</p><h2 style="font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.1;color:#06132d;margin-bottom:1.5rem;">Neue Termine <em>folgen.</em></h2><p style="max-width:560px;margin:0 auto 2rem;line-height:1.7;color:#65738b;">Aktuell sind keine Termine veröffentlicht. Informationen zu kommenden Ordertagen, Messen und Events finden Sie in Kürze hier.</p><a href="kontakt.html" class="editorial-text-link">Kontakt aufnehmen <span aria-hidden="true">↗</span></a></div>
 
     </div>
   </section>
@@ -98,49 +79,5 @@
   <div id="footer-placeholder"></div>
   <script src="partials.js"></script>
   <script src="main.js"></script>
-  <script>
-    /* ---- Events Data (replace with real dates) ---- */
-    const events = [
-      { date: 'Jan 2026', name: 'Ordertag Frühjahr/Sommer 2026', location: 'Düsseldorf', type: 'ordertag' },
-      { date: 'Feb 2026', name: 'PREMIUM Berlin', location: 'Berlin', type: 'messe' },
-      { date: 'Feb 2026', name: 'Seek Berlin', location: 'Berlin', type: 'messe' },
-      { date: 'Mar 2026', name: 'Showroom Frühjahrsorder', location: 'Düsseldorf', type: 'showroom' },
-      { date: 'Jul 2026', name: 'Ordertag Herbst/Winter 2026', location: 'Düsseldorf', type: 'ordertag' },
-      { date: 'Jul 2026', name: 'PREMIUM Berlin', location: 'Berlin', type: 'messe' },
-      { date: 'Aug 2026', name: 'Showroom Herbstorder', location: 'Düsseldorf', type: 'showroom' },
-    ];
-
-    const typeLabels = { messe: 'Messe', ordertag: 'Ordertag', showroom: 'Showroom' };
-    const tbody = document.getElementById('eventsTableBody');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    let active = 'all';
-
-    function renderEvents() {
-      const filtered = active === 'all' ? events : events.filter(e => e.type === active);
-      if (filtered.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="4" class="events-empty">Keine Termine gefunden.</td></tr>`;
-        return;
-      }
-      tbody.innerHTML = filtered.map(e => `
-        <tr data-type="${e.type}">
-          <td><span class="event-date">${e.date}</span></td>
-          <td><span class="event-name">${e.name}</span></td>
-          <td><span class="event-location">${e.location}</span></td>
-          <td><span class="event-badge">${typeLabels[e.type]}</span></td>
-        </tr>
-      `).join('');
-    }
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        active = btn.dataset.filter;
-        renderEvents();
-      });
-    });
-
-    renderEvents();
-  </script>
 </body>
 </html>
