@@ -56,7 +56,7 @@
         <ul class="footer__links">
           <li><a href="mailto:ozan@kavakbrandstudio.com">ozan@kavakbrandstudio.com</a></li>
           <li><a href="tel:+4917660997699">+49 176 60997699</a></li>
-          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem">Plockstraße 8, 40219 Düsseldorf</li>
+          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem"><a href="https://www.google.com/maps/search/?api=1&query=Plockstra%C3%9Fe+8%2C+40219+D%C3%BCsseldorf" target="_blank" rel="noopener noreferrer">Plockstraße 8, 40219 Düsseldorf ↗</a></li>
         </ul>
       </div>
       <div>
