@@ -190,7 +190,7 @@
         if (status) { status.textContent = 'Vielen Dank! Ihre Anfrage wurde übermittelt.'; status.className = 'contact-feedback is-success'; }
         contactForm.reset();
       } catch (err) {
-        if (status) {status.textContent = err.message || 'Bitte versuchen Sie es erneut.'; status.className = 'contact-feedback is-error';}
+        if (status) {status.replaceChildren(); status.className = 'contact-feedback is-error'; status.append(document.createTextNode('Der automatische Versand ist zurzeit nicht verfügbar. Bitte senden Sie Ihre Anfrage direkt per E-Mail an ')); const link = document.createElement('a'); link.href = 'mailto:ozan@kavakbrandstudio.com'; link.textContent = 'ozan@kavakbrandstudio.com'; status.append(link, document.createTextNode('. Ihre Formulareingaben wurden nicht übermittelt.'));}
       } finally {btn.disabled = false;btn.textContent = original;}
     });
   }
