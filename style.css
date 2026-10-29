@@ -1067,3 +1067,32 @@ button[type="submit"]:hover{background:#514438!important;color:#FFFFFF!important
 .editorial-action--light:hover{background:#302720!important;color:#FFFFFF!important}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #806A55;outline-offset:3px}
 @media(pointer:fine){.cursor{background:#FFFFFF!important;box-shadow:0 0 0 1px #302720,0 0 9px rgba(196,171,142,.65)!important}.cursor-ring{border-color:#FFFFFF!important;box-shadow:0 0 0 1px rgba(48,39,32,.5)!important}}
+
+/* =========================================================
+   KAVAK TYPOGRAPHY v2 — Outfit + Manrope
+   Geometric fashion identity, no editorial serif accents.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+:root{--font-heading:'Outfit',Arial,sans-serif;--font-sans:'Manrope',Arial,sans-serif;--font-serif:'Outfit',Arial,sans-serif}
+body,button,input,textarea,select{font-family:var(--font-sans)}
+h1,h2,h3,h4,h5,h6,.editorial-title,.t-display,.t-display-italic,.t-headline,.editorial-service-card h3,.curated-showcase__details h3,.studio-section h2,.studio-hero h1,.expertise-hero h1,.brands-hero h1,.event-line h2,.service-detail__title{
+  font-family:var(--font-heading)!important;font-weight:500;letter-spacing:-.045em;line-height:1.12
+}
+h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,
+.studio-section h2 em,.studio-hero h1 em,.expertise-hero h1 em,.brands-hero h1 em,
+.studio-finale h2 em,.expertise-cta h2 em,.home-editorial .editorial-hero__bottom h2 em,
+.brands-intro h2 em,.brands-collection h2 em,.expertise-services h2 em{
+  font-family:var(--font-heading)!important;font-style:normal!important;font-weight:500!important;
+  letter-spacing:-.045em
+}
+.home-editorial .editorial-hero__bottom h2{font-family:var(--font-heading)!important;font-weight:500;letter-spacing:-.055em;line-height:1.1}
+.home-editorial .editorial-hero__bottom h2 em{font-weight:600!important;color:#806A55!important}
+.editorial-hero__identity strong{font-family:var(--font-heading)!important;font-weight:500}
+.nav__links a,.nav__mobile a,.btn,.editorial-action,.editorial-text-link,.editorial-kicker,.editorial-label,.t-subheadline,.studio-kicker,.form-label{
+ font-family:var(--font-sans)!important
+}
+.nav__mobile a{font-size:clamp(1.7rem,7vw,2.3rem);font-weight:500;letter-spacing:-.025em}
+.nav__links a,.btn,.editorial-action,.editorial-text-link{font-weight:600;letter-spacing:.085em}
+.editorial-kicker,.editorial-label,.t-subheadline,.studio-kicker,.form-label{font-weight:600;letter-spacing:.15em}
+p,.editorial-body,.t-body,.studio-hero__lead{font-family:var(--font-sans);font-weight:400}
+@media(max-width:700px){h1,h2,h3,.editorial-title,.t-headline{letter-spacing:-.035em}}
