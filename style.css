@@ -1104,3 +1104,12 @@ h1,h2,h3,h4,h5,h6,.editorial-title,.t-display,.t-display-italic,.t-headline,.edi
 h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,.studio-section h2 em,.studio-hero h1 em,.expertise-hero h1 em,.brands-hero h1 em,.studio-finale h2 em,.expertise-cta h2 em,.home-editorial .editorial-hero__bottom h2 em,.brands-intro h2 em,.brands-collection h2 em,.expertise-services h2 em{font-family:var(--font-heading)!important;font-style:normal!important;font-weight:700!important;letter-spacing:-.02em}
 .home-editorial .editorial-hero__bottom h2{font-family:var(--font-heading)!important;font-weight:600;letter-spacing:-.025em;line-height:1.13}
 .editorial-hero__identity strong{font-family:var(--font-heading)!important;font-weight:600}
+
+/* Header: show the original unmodified KAVAK image, no espresso recoloring */
+.nav .kavak-logo--nav,
+.nav.scrolled .kavak-logo--nav,
+.nav--dark .kavak-logo--nav,
+.nav.dark-bg .kavak-logo--nav,
+.nav.scrolled:not(.dark-bg) .kavak-logo--nav{
+  filter:drop-shadow(0 1px 3px rgba(48,39,32,.45))!important;
+}
