@@ -56,16 +56,32 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+      const isOpen = mobileMenu.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     mobileMenu.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded','false');
+        hamburger.setAttribute('aria-label','Menü öffnen');
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
       });
     });
   }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileMenu?.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded','false');
+      hamburger?.setAttribute('aria-label','Menü öffnen');
+      document.body.style.overflow = '';
+      hamburger?.focus();
+    }
+  });
 
   /* Active nav link */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
