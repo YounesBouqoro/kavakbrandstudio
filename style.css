@@ -1096,3 +1096,11 @@ h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,
 .editorial-kicker,.editorial-label,.t-subheadline,.studio-kicker,.form-label{font-weight:600;letter-spacing:.15em}
 p,.editorial-body,.t-body,.studio-hero__lead{font-family:var(--font-sans);font-weight:400}
 @media(max-width:700px){h1,h2,h3,.editorial-title,.t-headline{letter-spacing:-.035em}}
+
+/* KAVAK — Comfortaa soft geometric typography */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+:root{--font-heading:'Comfortaa',Arial,sans-serif;--font-serif:'Comfortaa',Arial,sans-serif}
+h1,h2,h3,h4,h5,h6,.editorial-title,.t-display,.t-display-italic,.t-headline,.editorial-service-card h3,.curated-showcase__details h3,.studio-section h2,.studio-hero h1,.expertise-hero h1,.brands-hero h1,.event-line h2,.service-detail__title{font-family:var(--font-heading)!important;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,.studio-section h2 em,.studio-hero h1 em,.expertise-hero h1 em,.brands-hero h1 em,.studio-finale h2 em,.expertise-cta h2 em,.home-editorial .editorial-hero__bottom h2 em,.brands-intro h2 em,.brands-collection h2 em,.expertise-services h2 em{font-family:var(--font-heading)!important;font-style:normal!important;font-weight:700!important;letter-spacing:-.02em}
+.home-editorial .editorial-hero__bottom h2{font-family:var(--font-heading)!important;font-weight:600;letter-spacing:-.025em;line-height:1.13}
+.editorial-hero__identity strong{font-family:var(--font-heading)!important;font-weight:600}
