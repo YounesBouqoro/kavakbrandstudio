@@ -1113,3 +1113,17 @@ h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,.studio-s
 .nav.scrolled:not(.dark-bg) .kavak-logo--nav{
   filter:drop-shadow(0 1px 3px rgba(48,39,32,.45))!important;
 }
+
+/* LOCATION — two-click Google Maps consent (no Google request before user click) */
+.location-map--consent{position:relative;min-height:320px;padding:2rem;border:1px solid #d3bda3;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 65% 40%,#e9dac9 0%,#f7f3ed 70%);display:flex;align-items:center;justify-content:center;text-align:center}
+.location-map__placeholder{display:flex;flex-direction:column;align-items:center;gap:.65rem;max-width:330px;color:#302720}
+.location-map__pin{font-size:2rem;line-height:1;color:#806a55}
+.location-map__placeholder strong{font-size:1.1rem;letter-spacing:.15em}
+.location-map__placeholder small{font-size:.8rem}
+.location-map__placeholder p{font-size:.8rem;line-height:1.55;color:#514438;margin:.35rem 0}
+.location-map__placeholder a{font-size:.75rem;color:#514438;text-decoration:underline;text-underline-offset:3px}
+.location-map__load{cursor:pointer;appearance:none;background:#302720;color:#fff;border:1px solid #302720;border-radius:30px;padding:13px 24px;font:600 .8rem 'Manrope',Arial,sans-serif;transition:background .2s,color .2s}
+.location-map__load:hover,.location-map__load:focus-visible{background:#514438;color:#fff}
+.location-map--loaded{padding:0;min-height:320px}
+.location-map--loaded iframe{display:block;width:100%;height:100%;min-height:320px;border:0}
+@media(max-width:700px){.location-map--consent{min-height:300px;padding:1.5rem}.location-map--loaded{padding:0}}
