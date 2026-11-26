@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="style.css" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
-<body>
+<body class="contact-page">
 
   <div id="nav-placeholder"></div>
 
+  <main id="main-content">
   <!-- HERO -->
   <section class="bg-black" style="min-height:55vh;display:flex;align-items:flex-end;padding-bottom:5rem;padding-top:var(--nav-height);">
     <div class="container">
       <p class="t-subheadline hero-stagger" style="color:var(--gray-400);margin-bottom:1.5rem;">Kontakt</p>
       <h1 class="hero-stagger" style="font-family:var(--font-serif);font-size:clamp(3rem,7vw,8rem);font-weight:300;line-height:0.95;letter-spacing:-0.02em;color:var(--white);">
-        Lassen Sie uns<br><em>sprechen.</em>
+        Call Me
       </h1>
     </div>
   </section>
@@ -40,15 +41,11 @@
 
           
 
-          <div style="margin-bottom:3rem;" class="reveal reveal-delay-2"><p class="t-small" style="margin-bottom:0.75rem;">Telefon</p><a href="tel:+4917660997699" style="font-size:1.25rem;color:var(--midnight);">+49 176 60997699</a></div><div style="margin-bottom:3rem;" class="reveal reveal-delay-3">
-            <p class="t-small" style="margin-bottom:0.75rem;">Standort</p>
-            <p style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;color:var(--gray-700);">Plockstraße 8<br>40219 Düsseldorf</p>
+          <div style="margin-bottom:3rem;" class="reveal reveal-delay-2"><p class="t-small" style="margin-bottom:0.75rem;">Telefon</p><a href="tel:+491623431093" style="font-size:1.25rem;color:var(--midnight);">0162 3431093</a></div><div style="margin-bottom:3rem;" class="reveal reveal-delay-3">
+            <p class="t-small" style="margin-bottom:0.75rem;">Adresse</p>
+            <p style="font-family:var(--font-serif);font-size:1.25rem;font-weight:300;color:var(--gray-700);"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Plockstra%C3%9Fe+8-14%2C+40219+D%C3%BCsseldorf" target="_blank" rel="noopener noreferrer">Plockstraße 8–14<br>40219 Düsseldorf (Hafen)</a></p>
           </div>
 
-          <div class="reveal reveal-delay-4">
-            <p class="t-small" style="margin-bottom:0.75rem;">Vertriebsregionen</p>
-            <p class="t-body">NRW · Mitte Deutschland · Norddeutschland</p>
-          </div>
         </div>
 
         <div class="contact-form-spacer" style="grid-column:span 1;"></div>
@@ -56,31 +53,31 @@
         <!-- RIGHT: Form -->
         <div class="contact-form-column" style="grid-column:span 6;">
           <p class="t-subheadline reveal" style="color:var(--gray-400);margin-bottom:3rem;">Anfrage stellen</p>
-          <form id="contactForm" class="reveal reveal-delay-1"><div class="contact-honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <form id="contactForm" method="post" action="/api/contact" class="reveal reveal-delay-1"><div class="contact-honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
             <div class="grid-12" style="gap:0;">
               <div class="form-group" style="grid-column:span 6;">
                 <label class="form-label" for="vorname">Vorname</label>
-                <input class="form-input" type="text" id="vorname" name="vorname" placeholder="Max" required />
+                <input class="form-input" type="text" id="vorname" name="vorname" autocomplete="given-name" maxlength="80" required />
               </div>
               <div class="form-group" style="grid-column:span 6;">
                 <label class="form-label" for="nachname">Nachname</label>
-                <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
+                <input class="form-input" type="text" id="nachname" name="nachname" autocomplete="family-name" maxlength="80" required />
               </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="email">E-Mail</label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="max@brand.com" required />
+              <input class="form-input" type="email" id="email" name="email" autocomplete="email" maxlength="180" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="unternehmen">Unternehmen / Brand</label>
-              <input class="form-input" type="text" id="unternehmen" name="unternehmen" placeholder="Brand GmbH" />
+              <input class="form-input" type="text" id="unternehmen" name="unternehmen" autocomplete="organization" maxlength="180" />
             </div>
             <div class="form-group">
               <label class="form-label" for="anliegen">Anliegen</label>
               <select class="form-input" id="anliegen" name="anliegen" required style="appearance:none;cursor:pointer;">
                 <option value="">Bitte wählen</option>
-                <option value="brand">Ich bin eine Brand – Vertriebspartnerschaft</option>
-                <option value="handel">Ich bin Händler – Neues Sortiment</option>
+                <option value="brand">Vertriebspartnerschaft für meine Brand</option>
+                <option value="handel">Marken und Sortimente für meinen Handel</option>
                 <option value="showroom">Showroom-Termin anfragen</option>
                 <option value="messe">Messeauftritt / Ordertag</option>
                 <option value="sonstiges">Sonstiges</option>
@@ -88,7 +85,7 @@
             </div>
             <div class="form-group">
               <label class="form-label" for="nachricht">Nachricht</label>
-              <textarea class="form-textarea" id="nachricht" name="nachricht" required minlength="10" maxlength="5000" placeholder="Kurze Beschreibung Ihres Anliegens…" rows="5"></textarea>
+              <textarea class="form-textarea" id="nachricht" name="nachricht" required minlength="10" maxlength="5000" placeholder="Worum geht es?" rows="5"></textarea>
             </div>
             <div style="margin-top:2rem;">
               <button type="submit" class="btn btn--filled" style="width:100%;justify-content:center;">
@@ -105,6 +102,7 @@
     </div>
   </section>
 
+  </main>
   <div id="footer-placeholder"></div>
   <script src="partials.js"></script>
   <script src="main.js"></script>
