@@ -1363,3 +1363,7 @@ h1 em,h2 em,h3 em,.editorial-title em,.t-headline em,.t-display-italic,.studio-s
 @media (min-width: 801px) and (max-width: 1050px) {
   .nav__links { gap: 1rem; }
 }
+
+#gabbiano .brand-campaign {
+  object-position: center 24%;
+}
