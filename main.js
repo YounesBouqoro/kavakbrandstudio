@@ -196,17 +196,35 @@
       e.preventDefault();
       if (!contactForm.reportValidity()) return;
       const btn = contactForm.querySelector('button[type="submit"]');
+      if (btn.disabled) return;
       const original = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Wird gesendet …';
+      const fields = Object.fromEntries(new FormData(contactForm));
+      btn.disabled = true;
+      btn.textContent = 'Wird gesendet …';
       if (status) { status.textContent = ''; status.className = 'contact-feedback'; }
       try {
-        const response = await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(Object.fromEntries(new FormData(contactForm)))});
+        const response = await fetch('/api/contact', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(fields)});
         const result = await response.json().catch(()=>({}));
         if (!response.ok || !result.success) throw new Error(result.error || 'Versand nicht möglich.');
         if (status) { status.textContent = 'Vielen Dank! Ihre Anfrage wurde übermittelt.'; status.className = 'contact-feedback is-success'; }
         contactForm.reset();
-      } catch (err) {
-        if (status) {status.replaceChildren(); status.className = 'contact-feedback is-error'; status.append(document.createTextNode('Der automatische Versand ist zurzeit nicht verfügbar. Bitte senden Sie Ihre Anfrage direkt per E-Mail an ')); const link = document.createElement('a'); link.href = 'mailto:ozan@kavakbrandstudio.com'; link.textContent = 'ozan@kavakbrandstudio.com'; status.append(link, document.createTextNode('. Ihre Formulareingaben wurden nicht übermittelt.'));}
+      } catch {
+        if (status) {
+          const subject = contactForm.elements.anliegen.selectedOptions[0].textContent;
+          const body = [
+            fields.nachricht,
+            '',
+            fields.vorname + ' ' + fields.nachname,
+            fields.unternehmen,
+            fields.email,
+          ].join('\n');
+          const link = document.createElement('a');
+          link.href = 'mailto:ozan@kavakbrandstudio.com?subject=' +
+            encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+          link.textContent = 'Anfrage als E-Mail öffnen';
+          status.className = 'contact-feedback is-error';
+          status.replaceChildren('Der Versand war gerade nicht möglich. ', link);
+        }
       } finally {btn.disabled = false;btn.textContent = original;}
     });
   }

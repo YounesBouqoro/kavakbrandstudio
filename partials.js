@@ -7,29 +7,35 @@
   /* ---- resolve root path ---- */
   const root = './';
 
+  const navigation = [
+    ['service.html', 'What I Do'],
+    ['about.html', 'About Me'],
+    ['studio.html', 'Studio'],
+    ['brands.html', 'Brands'],
+    ['dates.html', 'Dates'],
+    ['kontakt.html', 'Kontakt'],
+  ];
+  const page = window.location.pathname.split('/').pop();
+  const navLinks = navigation.map(([path, label]) => {
+    const current = page === path ? ' aria-current="page"' : '';
+    return `<li><a href="${root}${path}"${current}>${label}</a></li>`;
+  }).join('\n  ');
+
   /* ---- NAV ---- */
   const NAV_HTML = `
 <nav class="nav" id="mainNav">
   <div class="nav__inner">
     <a href="${root}index.html" class="nav__logo" aria-label="KAVAK Brand Studio – Startseite"><img src="${root}assets/images/kavak-logo.png" class="kavak-logo--nav" alt="KAVAK Brand Studio"></a>
     <ul class="nav__links">
-      <li><a href="${root}studio.html">Studio</a></li>
-      <li><a href="${root}brands.html">Brands</a></li>
-      <li><a href="${root}service.html">Expertise</a></li>
-      <li><a href="${root}dates.html">Dates</a></li>
-      <li><a href="${root}kontakt.html">Kontakt</a></li>
-    </ul>
+  ${navLinks}
+</ul>
     <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 <ul class="nav__mobile">
-  <li><a href="${root}studio.html">Studio</a></li>
-  <li><a href="${root}brands.html">Brands</a></li>
-  <li><a href="${root}service.html">Expertise</a></li>
-  <li><a href="${root}dates.html">Dates</a></li>
-  <li><a href="${root}kontakt.html">Kontakt</a></li>
+  ${navLinks}
 </ul>`;
 
   /* ---- FOOTER ---- */
@@ -45,18 +51,15 @@
         <p class="footer__col-title">Navigation</p>
         <ul class="footer__links">
           <li><a href="${root}index.html">Startseite</a></li>
-          <li><a href="${root}brands.html">Brands</a></li>
-          <li><a href="${root}service.html">Expertise</a></li>
-          <li><a href="${root}dates.html">Dates</a></li>
-          <li><a href="${root}kontakt.html">Kontakt</a></li>
+          ${navLinks}
         </ul>
       </div>
       <div>
         <p class="footer__col-title">Kontakt</p>
         <ul class="footer__links">
           <li><a href="mailto:ozan@kavakbrandstudio.com">ozan@kavakbrandstudio.com</a></li>
-          <li><a href="tel:+4917660997699">+49 176 60997699</a></li>
-          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem"><a href="https://www.google.com/maps/search/?api=1&query=Plockstra%C3%9Fe+8%2C+40219+D%C3%BCsseldorf" target="_blank" rel="noopener noreferrer">Plockstraße 8, 40219 Düsseldorf </a></li>
+          <li><a href="tel:+491623431093">0162 3431093</a></li>
+          <li style="color:var(--gray-400);font-size:0.85rem;margin-top:0.5rem"><a href="https://www.google.com/maps/search/?api=1&query=Plockstra%C3%9Fe+8-14%2C+40219+D%C3%BCsseldorf" target="_blank" rel="noopener noreferrer">Plockstraße 8–14, 40219 Düsseldorf </a></li>
         </ul>
       </div>
       <div>
